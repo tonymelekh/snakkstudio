@@ -88,18 +88,22 @@ var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')
       }
       
       document.querySelectorAll('[data-video-size-button="' + videoSize + '"]').forEach(item => {item.style.fontWeight = 900; item.style.color = "white";})
+		console.log("aaaa")
       $('[data-video-size="' + selectedVideo + '"]').animate({
 	opacity: 0
       }, 400, function() {
-	      console.log("selectedVideo: ", selectedVideo)
-	      console.log("videoSize: ", videoSize)
-	      $(document.querySelectorAll('[data-video-size="' + videoSize + '"]')).css('display', 'block')
-	      $('[data-video-size="' + selectedVideo + '"]').css('display', "none")
-	      $(document.querySelectorAll('[data-video-size="' + videoSize + '"]')).css('opacity', 0)
-	      $(document.querySelectorAll('[data-video-size="' + videoSize + '"]')).animate({
-		opacity: 1
-	      }, 400)
-	      selectedVideo = videoSize
+	      if (selectedVideo !== videoSize) {
+		      console.log("selectedVideo: ", selectedVideo)
+		      console.log("videoSize: ", videoSize)
+		      $(document.querySelectorAll('[data-video-size="' + videoSize + '"]')).css('display', 'block')
+		      $('[data-video-size="' + selectedVideo + '"]').css('display', "none")
+		      $(document.querySelectorAll('[data-video-size="' + videoSize + '"]')).css('opacity', 0)
+		      $(document.querySelectorAll('[data-video-size="' + videoSize + '"]')).animate({
+			opacity: 1
+		      }, 400)
+		      selectedVideo = videoSize
+	      }
+
       })
     })
   })
