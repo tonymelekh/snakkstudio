@@ -5,7 +5,6 @@ var fadeOutAllVideos1 = function() {
 	$('[data-video-size="9-16"]').fadeOut();
 }
 
-
 var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')
   document.querySelectorAll('[data-video-size="16-9"]').forEach(item => {
     item.style.display = "none"
