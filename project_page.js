@@ -88,8 +88,7 @@ var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')
       
       document.querySelectorAll('[data-video-size-button="' + videoSize + '"]').forEach(item => {item.style.fontWeight = 900; item.style.color = "white";})
       document.querySelectorAll('[data-video-size="' + videoSize + '"]').forEach(item => {
-	      console.log('asdasdasd');
-	      if (selectedVideo === videoSize) {
+	      if (selectedVideo !== videoSize) {
 		      $('[data-video-size="' + selectedVideo + '"]').animate({
 		      	opacity: 0
 		      }, 400, function() {
