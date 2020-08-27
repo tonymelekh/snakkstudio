@@ -88,19 +88,22 @@ var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')
       
       document.querySelectorAll('[data-video-size-button="' + videoSize + '"]').forEach(item => {item.style.fontWeight = 900; item.style.color = "white";})
       document.querySelectorAll('[data-video-size="' + videoSize + '"]').forEach(item => {
-	      $('[data-video-size="' + selectedVideo + '"]').animate({
-		      opacity: 0
-	      }, 400, function() {
-		      console.log("selectedVideo: ", selectedVideo)
-		      console.log("videoSize: ", videoSize)
-		      $(item).css('display', 'block')
-		      $('[data-video-size="' + selectedVideo + '"]').css('display', "none")
-		      $(item).css('opacity', 0)
-		      $(item).animate({
-		      	opacity: 1
-		      }, 400)
-		      selectedVideo = videoSize
-	      })
+	      console.log('asdasdasd');
+	      if (selectedVideo === videoSize) {
+		      $('[data-video-size="' + selectedVideo + '"]').animate({
+		      	opacity: 0
+		      }, 400, function() {
+			      console.log("selectedVideo: ", selectedVideo)
+			      console.log("videoSize: ", videoSize)
+			      $(item).css('display', 'block')
+			      $('[data-video-size="' + selectedVideo + '"]').css('display', "none")
+			      $(item).css('opacity', 0)
+			      $(item).animate({
+				opacity: 1
+			      }, 400)
+			      selectedVideo = videoSize
+		      })
+	      }
 	      
       })
     })
