@@ -91,9 +91,9 @@ var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')
 	      $('[data-video-size="' + selectedVideo + '"]').animate({
 		      opacity: 0
 	      }, 400, function() {
+		      $(item).css('display', 'block')
 		      $('[data-video-size="' + selectedVideo + '"]').css('display', "none")
 		      $(item).css('opacity', 0)
-		      $(item).css('display', 'block')
 		      $(item).animate({
 		      	opacity: 1
 		      }, 400)
