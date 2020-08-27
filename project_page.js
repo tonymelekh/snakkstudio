@@ -1,4 +1,11 @@
-	var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')
+var fadeOutAllVideos1 = function() {
+	$('[data-video-size="16-9"]').fadeOut();
+	$('[data-video-size="1-1"]').fadeOut();
+	$('[data-video-size="4-5"]').fadeOut();
+	$('[data-video-size="9-16"]').fadeOut();
+}
+
+var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')
   document.querySelectorAll('[data-video-size="16-9"]').forEach(item => {
     item.style.display = "none"
   })
@@ -64,7 +71,7 @@
             item.style.color = "#979797";
           })
       	document.querySelectorAll('[data-video-size="9-16"]').forEach(item => {
-            item.style.display = "none"
+            fadeOutAllVideos1();
           })
       }
       if (document.querySelectorAll('[data-video-size-button="1-1"]') && document.querySelectorAll('[data-video-size-button="1-1"]').length) {
@@ -73,7 +80,7 @@
             item.style.color = "#979797";
           })
         document.querySelectorAll('[data-video-size="1-1"]').forEach(item => {
-            item.style.display = "none"
+            fadeOutAllVideos1();
           })
       }
       if (document.querySelectorAll('[data-video-size-button="4-5"]') && document.querySelectorAll('[data-video-size-button="4-5"]').length) {
@@ -82,12 +89,12 @@
             item.style.color = "#979797";
           })
         document.querySelectorAll('[data-video-size="4-5"]').forEach(item => {
-            item.style.display = "none"
+            fadeOutAllVideos1();
           })
       }
       if (document.querySelectorAll('[data-video-size-button="16-9"]') && document.querySelectorAll('[data-video-size-button="16-9"]').length) {
       	document.querySelectorAll('[data-video-size-button="16-9"]').forEach(item => {item.style.fontWeight = 400; item.style.color = "#979797";})
-        document.querySelectorAll('[data-video-size="16-9"]').forEach(item => {item.style.display = "none"})
+        document.querySelectorAll('[data-video-size="16-9"]').forEach(item => {fadeOutAllVideos1();})
       }
       
       document.querySelectorAll('[data-video-size-button="' + videoSize + '"]').forEach(item => {item.style.fontWeight = 900; item.style.color = "white";})
