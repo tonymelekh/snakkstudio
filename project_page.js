@@ -98,6 +98,6 @@ var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')
       }
       
       document.querySelectorAll('[data-video-size-button="' + videoSize + '"]').forEach(item => {item.style.fontWeight = 900; item.style.color = "white";})
-      document.querySelectorAll('[data-video-size="' + videoSize + '"]').forEach(item => {item.style.display = "block";})
+      document.querySelectorAll('[data-video-size="' + videoSize + '"]').forEach(item => {$(item).delay(401).fadeIn()})
     })
   })
