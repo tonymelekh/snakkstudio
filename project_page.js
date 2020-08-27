@@ -61,8 +61,9 @@ var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')
     }
   }
   document.querySelectorAll(".js-button-video-size").forEach(function(item) {
-		$(item).on("click touchstart", function(e) {
+	$(item).on("click touchstart", function(e) {
       var videoSize = e.target.dataset.videoSizeButton
+      console.log("aaaaaaaaa: ", videoSize)
       
       if (document.querySelectorAll('[data-video-size-button="9-16"]') && document.querySelectorAll('[data-video-size-button="9-16"]').length) {
       	document.querySelectorAll('[data-video-size-button="9-16"]').forEach(item => {
@@ -88,6 +89,7 @@ var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')
       
       document.querySelectorAll('[data-video-size-button="' + videoSize + '"]').forEach(item => {item.style.fontWeight = 900; item.style.color = "white";})
       document.querySelectorAll('[data-video-size="' + videoSize + '"]').forEach(item => {
+	      console.log("adfasdfasdfasdf");
 	      if (selectedVideo !== videoSize) {
 		      $('[data-video-size="' + selectedVideo + '"]').animate({
 		      	opacity: 0
