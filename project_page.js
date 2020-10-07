@@ -1,7 +1,6 @@
 var selectedVideo = null;
 var selectedVideo2 = null;
 
-var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')
   document.querySelectorAll('[data-video-size="16-9"]').forEach(item => {
     item.style.display = "none"
   })
@@ -14,9 +13,11 @@ var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')
   document.querySelectorAll('[data-video-size="9-16"]').forEach(item => {
     item.style.display = "none"
   })
+
+var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')[0].children
   
   if (startSelect && startSelect.length) {
-  	startSelect.forEach(item => {
+      document.querySelectorAll('[data-video-size-button="16-9"]').forEach(item => {
       item.style.fontWeight = 900;
       item.style.color = 'white'
     })
@@ -25,20 +26,20 @@ var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')
       item.style.display = "block"
     })
   } else {
-  	startSelect = document.querySelectorAll('[data-video-size-button="1-1"]')
+  	startSelect = document.querySelectorAll('[data-video-size-button="1-1"]')[0].children
     if (startSelect && startSelect.length) {
-  		startSelect.forEach(item => {
+  	document.querySelectorAll('[data-video-size-button="1-1"]').forEach(item => {
         item.style.fontWeight = 900;
         item.style.color = 'white'
       })
       document.querySelectorAll('[data-video-size="1-1"]').forEach(item => {
-	      selectedVideo = "1-1"
+	selectedVideo = "1-1"
         item.style.display = "block"
       })
   	} else {
-    	startSelect = document.querySelectorAll('[data-video-size-button="4-5"]')
+    	startSelect = document.querySelectorAll('[data-video-size-button="4-5"]')[0].children
       if (startSelect && startSelect.length) {
-        startSelect.forEach(item => {
+        document.querySelectorAll('[data-video-size-button="4-5"]').forEach(item => {
           item.style.fontWeight = 900;
           item.style.color = 'white'
         })
@@ -47,9 +48,9 @@ var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')
           item.style.display = "block"
         })
       } else {
-				startSelect = document.querySelectorAll('[data-video-size-button="9-16"]')
+	startSelect = document.querySelectorAll('[data-video-size-button="9-16"]')[0].children
         if (startSelect && startSelect.length) {
-          startSelect.forEach(item => {
+          document.querySelectorAll('[data-video-size-button="9-16"]').forEach(item => {
             item.style.fontWeight = 900;
             item.style.color = 'white'
           })
