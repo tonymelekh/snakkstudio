@@ -14,7 +14,7 @@ var selectedVideo2 = null;
     item.style.display = "none"
   })
 
-var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')[0].children
+var startSelect = document.querySelectorAll('[data-video-size="16-9"]')[0].children
   
   if (startSelect && startSelect.length) {
       document.querySelectorAll('[data-video-size-button="16-9"]').forEach(item => {
@@ -26,7 +26,7 @@ var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')[0
       item.style.display = "block"
     })
   } else {
-  	startSelect = document.querySelectorAll('[data-video-size-button="1-1"]')[0].children
+  	startSelect = document.querySelectorAll('[data-video-size="1-1"]')[0].children
     if (startSelect && startSelect.length) {
   	document.querySelectorAll('[data-video-size-button="1-1"]').forEach(item => {
         item.style.fontWeight = 900;
@@ -37,7 +37,7 @@ var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')[0
         item.style.display = "block"
       })
   	} else {
-    	startSelect = document.querySelectorAll('[data-video-size-button="4-5"]')[0].children
+    	startSelect = document.querySelectorAll('[data-video-size="4-5"]')[0].children
       if (startSelect && startSelect.length) {
         document.querySelectorAll('[data-video-size-button="4-5"]').forEach(item => {
           item.style.fontWeight = 900;
@@ -48,7 +48,7 @@ var startSelect = document.querySelectorAll('[data-video-size-button="16-9"]')[0
           item.style.display = "block"
         })
       } else {
-	startSelect = document.querySelectorAll('[data-video-size-button="9-16"]')[0].children
+	startSelect = document.querySelectorAll('[data-video-size="9-16"]')[0].children
         if (startSelect && startSelect.length) {
           document.querySelectorAll('[data-video-size-button="9-16"]').forEach(item => {
             item.style.fontWeight = 900;
