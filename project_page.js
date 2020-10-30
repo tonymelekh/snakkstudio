@@ -66,7 +66,7 @@ var startSelect = document.querySelectorAll('[data-video-size="16-9"]')[0].child
 	$(item).on("click touchstart", function(e) {
       var videoSize = e.target.dataset.videoSizeButton
       
-      if (selectedVideo !== videoSize) {
+      if (videoSize && selectedVideo !== videoSize) {
 	      if (document.querySelectorAll('[data-video-size-button="9-16"]') && document.querySelectorAll('[data-video-size-button="9-16"]').length) {
 		document.querySelectorAll('[data-video-size-button="9-16"]').forEach(item => {
 		    item.style.fontWeight = 400;
@@ -129,7 +129,7 @@ var startSelect = document.querySelectorAll('[data-video-size-button="1"]')
     $(item).on("click touchstart", function(e) {
       var videoSize2 = e.target.dataset.videoSizeButton
       
-      if (selectedVideo2 !== videoSize2) {
+      if (videoSize2 && selectedVideo2 !== videoSize2) {
 	      if (document.querySelectorAll('[data-video-size-button="1"]') && document.querySelectorAll('[data-video-size-button="1"]').length) {
 		document.querySelectorAll('[data-video-size-button="1"]').forEach(item => {item.style.fontWeight = 400; item.style.color = "#979797";})
 	      }
